@@ -8,6 +8,7 @@ exports.postSignup = (req, res, next) =>{
     const email = req.body.email;
     const password  = req.body.password;
     
+    
     user.findOne({email : email })
     .then( user =>{
         if(user){
